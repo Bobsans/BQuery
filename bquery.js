@@ -1,4 +1,17 @@
+/* @preserve
+ * BQuery JS library v0.1 alpha
+ * Simplest version of JQuery.
+ * http://vk.com/b_o_b_s_a_n_s
+ * by Bobsans
+ */
+
 (function(window, document) {
+	var info = {
+		'name': 'BQuery',
+		'version': '0.1 aplha',
+		'author': 'Bobsans'
+	};
+
 	var BQType = Object.freeze({
 		SINGLENODE:      0,
 		NODELIST:        1,
@@ -348,6 +361,9 @@
 	};
 
 	window.BQ.__proto__ = {
+		'name':     info.name,
+		'version':  info.version,
+		'author':   info.author,
 		'ready':    BQuery.prototype.ready,
 		'ajax':     BQuery.prototype.ajax,
 		'scrollTo': BQuery.prototype.scrollTo,
